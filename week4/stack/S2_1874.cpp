@@ -20,9 +20,6 @@ int main(void) {
     // 앞으로 집어넣어야 할 값 선언
     int start = 1;
 
-    // 조건은 참으로 가정
-    bool check = true;
-
     // 모든 원소에 대해 반복
     while (n--) {
         // 원소 입력 받기
@@ -42,15 +39,14 @@ int main(void) {
         }
         // 같지 않는 경우는 조건에 부합하지 않는 상황
         else {
-            check = false; // 결과 출력 분기 변수 거짓으로 갱신
-            break; // 반복문 탈출
+            cout << "NO\n";
+            return 0;
         }
         
     }
 
     // 결과 출력
-    if (check) for (char x : v) cout << x << '\n';
-    else cout << "NO\n";
+    for (char x : v) cout << x << '\n';
 
     return 0;
 }
