@@ -13,13 +13,12 @@ void sieve_of_eratosthenes(vector<bool> &v) {
     v[1] = false;
 
     // 2부터 시작함 ~ 원하는 범위의 제곱근까지
-    for (int i = 2; i < sqrt(v.size()); i++) {
+    for (int i = 2; i * i < v.size(); i++) {
         // 현재의 벡터 값이 true(소수) 인 경우
         if (v[i]) {
-            int idx = i;
             // 해당 값은 넘어가고,
             // 그 값의 배수들은 소수가 아니므로, false로 값 갱신
-            for (int j = i * 2; j < v.size(); j += i) v[j] = false;
+            for (int j = i * i; j < v.size(); j += i) v[j] = false;
         }
     }
 }
