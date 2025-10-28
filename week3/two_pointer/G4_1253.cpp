@@ -28,7 +28,7 @@ int main(void) {
     for (int i = 0; i < N; i++) {
 
         // 원소를 순차적으로 좋은수인지 판단
-        long good = v[i];
+        ll good = v[i];
     
         // 투 포인터 선언
         int start = 0, end = N - 1;
