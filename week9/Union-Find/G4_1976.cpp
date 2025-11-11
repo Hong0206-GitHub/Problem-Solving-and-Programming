@@ -36,7 +36,7 @@ int main(void) {
     for (int i = 0; i < M; i++) cin >> route[i];
 
     // 루트부터 모든 도시가 연결되어있는지 판단
-    int root = route[0];
+    int root = find(route[0]);
 
     for (int i = 1; i < M; i++) {
         if (find(route[i]) != root) {
